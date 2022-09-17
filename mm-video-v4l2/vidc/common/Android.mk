@@ -20,6 +20,10 @@ ifeq ($(TARGET_USES_ION),true)
 libmm-vidc-def += -DUSE_ION
 endif
 
+ifeq ($(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE), true)
+libmm-vidc-def += -DGRALLOC_HANDLE_HAS_RESERVED_SIZE
+endif
+
 # ---------------------------------------------------------------------------------
 # 			Make the Shared library (libOmxVidcCommon)
 # ---------------------------------------------------------------------------------
